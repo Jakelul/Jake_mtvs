@@ -6,27 +6,102 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="르탄이 - 프로필 링크" />
-        <meta property="og:description" content="어서와 코딩은 처음이지?" />
-        <meta property="og:image" content="공유할 이미지" />
-        <title>르탄이 - 프로필 링크</title>
+        <meta property="og:title" content="Jake 김윤찬" />
+        <meta property="og:description" content="안녕하세요 김윤찬 입니다." />
+        <meta property="og:image" content="김윤찬(썸네일).png" />
+        <title>Jake 김윤찬</title>
         <style>
-            .mytitle {
-                color: red;
+            @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+            * {
+            font-family: "Pretendard",serif;
+            }
+            body {
+                background-color: #44398A;
+            }
+            .profile {
+                width: 100px; /* 넓이 */
+                height: 100px; /* 높이 */
+
+                /* background-color: green; */ /* 배경색 */
+                border-radius: 100%; /* 둥근 정도 */
+
+                border : 2px solid white; /* 원 밖 테두리 '굵기', '실선', '색상' */
+
+                background-image: url('김윤찬.png'); /* 파일명 */
+                background-position: center; /* 포지션 */
+                background-size: cover; /* 사이즈 */
+                /* 다 만들고 백그라운드 컬러 지우기 */
+            }
+            .main {
+                color: white;
+                font-size: 20px;
+                /* 글자 줄 간격을 띄워보자 'margin' */
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+            .sub {
+                color: white;
+                font-size: 14px;
+
+                margin-top: 0px;
+                margin-bottom: 30px;
+            }
+            .wrap {
+                /* background-color: green; */ /*다 만들고 백그라운드 컬러 지우기*/
+                width: 300px; /* 백그라운드 크기 */
+                margin: 30px auto 0px auto; /* margin : 여백밀기, 위부터 시계방향으로 돈다.
+                위는 30px, 오른쪽 쭉 밀기 : auto, 밑은 안띄움, 왼쪽도 auto */
+                /* 프로필 사진을 background 안에서 움직이게 하려면 display flex를 사용 */
+
+                display: flex; /* 백그라운드 안 내용물 정렬 */
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* 다 만들고 백그라운드 컬러 지우기 */
+            }
+            .wrap > a { /* <style>태그 안에서 .wrap > a 처럼 오른쪽 화살괄호(>)로 표기하면
+                "wrap으로 이름붙인 div안에 모든 a 태그에 적용해줘"라는 뜻이 된다 */
+                width: 300px; /* 네모 사이즈 */
+                height: 50px; /* 네모 사이즈 */
+
+                background-color: white; /* 배경색 */
+                border-radius: 8px; /* 둥근 모서리 */
+                /* 네모칸 사이사이 간격 띄우기 */
+                margin-bottom: 10px;
+                /* 네모 안 글자 편집 : 폰트 */
+                font-size: 14px; /* 폰트 사이즈 */
+                font-weight: bold; /* 폰트 굵기 */
+                color: #44398A;
+                /* 네모 안 글자 편집 : 위치 */
+                display: flex; /* 백그라운드 안 내용물 정렬 */
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* 밑줄이 안없어졌을것. 이것은 a태그에 자동으로 들어간다. 없애보자 */
+                text-decoration: none;
+                /* 마지막으로 글씨에 그림자 */
+                box-shadow: 3px 3px 5px 0px black; /* 오른쪽 얼마나 그림자?(3px), 5px는 꼬리의 길이, 0px는 선명도, 마지막은 그림자 색 */
+                /* 글꼴(font)은 맨 위에서 수정한다 */
+                /* 마지막으로 마우스를 박스에 올리면 색이 변하게 해보자 */
+            }
+            .wrap > a:hover {
+                background-color: #f2f2f2f2;
+                /* 마우스 박스에 대면 회색으로 변한다 */
             }
         </style>
     </head>
     <body>
-        <!-- 우리가 웹페이지에서 볼 수 있는 부분을 세팅하는 곳이죠.
-             우리가 집에서 눈에 볼 수 있는 집 구조들을 설정하는 곳이죠.-->
-             <div>나는 구역을 나누죠</div>
-             <p>나는 문단이에요</p>
-             <h1 class="mytitle">h1은 제목이에요.</h1>
-             <h2>h2는 소제목입니다.</h2>
-             <h3>h3~h6 h 뒷 숫자가 커질수록 글자 크기는 작아져요. </h3>
-             <a href="https://spartacodingclub.kr/"> 하이퍼링크 </a>
-             <img src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/free/logo_teamsparta.png" width="300"/>  
-             <input type="text">
-             <button>버튼입니다.</button>
+        <div class="wrap">
+            <div class="profile"></div>
+            <h1 class="main"> Jake 김윤찬 </h1>
+            <p class="sub"> (現)Christaverse PO </p>
+            <p class="sub"> (現)총회메타버스 전문위원 팀장 </p>
+            <p class="sub"> (現)청운교회 메타버스사역부 Head Director </p>
+            <a target="_blank" href="https://christaverse.oopy.io/">Christaverse 홈페이지</a>
+            <a target="_blank" href="https://www.facebook.com/YunChanK?locale=ko_KR">페이스북</a>
+            <a target="_blank" href="https://www.instagram.com/lifeisworship_19/">인스타그램</a>
+            <a target="_blank" href="https://github.com/Jakelul">Github</a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCmt2DyLHMsUf4m-MFyGezpg">Youtube</a>
+        </div>
     </body>
 </html>
